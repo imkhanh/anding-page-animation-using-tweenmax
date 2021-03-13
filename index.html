@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Langding Page</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-text">It's time for show</div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <nav class="nav">
+                <div class="logo">NewFashion</div>
+                <div class="language">FR / EN</div>
+            </nav>
+            <div class="wrapper">
+                <h1 class="text">Essence <br> alternative story</h1>
+                <div class="wrapper-img">
+                    <div class="box"></div>
+                    <img class="img" src="./images/left.jpg" alt="">
+                    <a href="">View Project</a></div>
+            </div>
+        </div>
+        <ul class="media-social">
+            <li>
+                <ion-icon name="logo-facebook"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </li>
+        </ul>
+        <div class="collab">
+            <h1>/collaborations</h1>
+        </div>
+        <div class="right">
+            <div class="box-2"></div>
+            <img class="img-2" src="./images/right.jpg" alt="">
+        </div>
+        <p class="new-talents">New Talents</p>
+    </div>
+
+    </div>
+
+    <script>
+        TweenMax.to('.loader', 1.6, {
+            top: '-100%',
+            delay: 2,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.loader-text', 1.6, {
+            opacity: 0,
+            y: 100,
+            delay: 0.4,
+            ease: Expo.easeInOut
+        });
+
+
+        /*left*/
+
+        TweenMax.staggerFrom('.nav > div', 1.6, {
+            opacity: 0,
+            y: 50,
+            delay: 2.6,
+            ease: Expo.easeInOut
+        }, 0.4)
+        TweenMax.from('.text', 1.6, {
+            y: 20,
+            opacity: 0,
+            delay: 2.6,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from('.wrapper-img > a', 1.6, {
+            scale: 1.4,
+            opacity: 0,
+            delay: 2.6,
+            ease: Expo.easeInOut
+        })
+        TweenMax.to('.box', 1.6, {
+            width: "0",
+            delay: 2.2,
+            ease: Power2.easeInOut
+        });
+        TweenMax.staggerFrom('.media-social > li', 1.6, {
+            opacity: 0,
+            y: 50,
+            delay: 2.6,
+            ease: Expo.easeInOut
+        }, 0.2)
+
+        TweenMax.from('.collab', 1.6, {
+            y: 30,
+            delay: 2.2,
+            opacity: 0,
+            ease: Power2.easeInOut
+        });
+        TweenMax.from('.img-2', 1.6, {
+            scale: 1.4,
+            delay: 2,
+            ease: Power2.easeInOut
+        });
+        TweenMax.from('.new-talents', 1.6, {
+            y: 30,
+            delay: 2.6,
+            opacity: 0,
+            ease: Power2.easeInOut
+        });
+    </script>
+</body>
+
+</html>
